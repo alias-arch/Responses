@@ -1,0 +1,32 @@
+{
+  "questions": [
+    {
+      "titre": "question1",
+      "private": true,
+      "createdAt": "2020-10-14",
+      "createdBy": "iliass",
+      "type": "short-answer"
+    },
+    {
+      "titre": "question2",
+      "private": false,
+      "createdAt": "2020-10-14",
+      "createdBy": "iliass",
+      "type": "multiple-choice",
+      "qcmValues": [
+        "vrai",
+        "faux"
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
