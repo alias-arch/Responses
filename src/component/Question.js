@@ -13,7 +13,7 @@ const Question = (props) => {
   const renderQuestion = (question) => {
     const { id, titre, type, qcmValues } = question;
     switch (type) {
-      case "short-answer":
+      case "short_answer":
         return (
           <ShortAnswerQuestion
             key={props.question.id}
@@ -23,7 +23,7 @@ const Question = (props) => {
             onChange={handleResponseChange}
           />
         );
-      case "multiple-choice":
+      case "multiple_choice":
         return (
           <MultipleChoiceQuestion
             key={props.question.id}

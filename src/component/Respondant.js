@@ -5,6 +5,18 @@ const Respondant = (props) => {
   const [nom, setNom] = useState('');
   const [email, setEmail] = useState('');
   const [organisme, setOrganisme] = useState('');
+  const saveRespondant = async (repondant) => {
+    const res = await fetch(`http://localhost:8080/api/responses/repondant`, {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json',
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(repondant)
+    })
+    const data = res.json()
+    console.log(data)
+  }
   const submitRespondant = (e) => {
     // remember to add a prop that changes the showResponse state when clicking on save inofs 
     e.preventDefault();
@@ -26,6 +38,8 @@ const Respondant = (props) => {
     setEmail('');
     setOrganisme('');
     props.onSave();
+    saveRespondant({ nom, email, organisme })
+
 
 
   }
